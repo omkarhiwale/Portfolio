@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omkar Hiwale - Software Developer</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Added smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Dark Mode Modern theme with graphic blobs and glass effect */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212; /* Charcoal black */
+      color: #E0E0E0; /* Light grey */
+      margin-top: 70px;
+    }
+
+    /* Navbar */
+    nav.navbar {
+      background-color: #1A1A1A !important; /* Slightly lighter charcoal */
+      box-shadow: 0 2px 15px rgba(255, 127, 17, 0.1); /* Neon orange shadow */
+    }
+    nav .navbar-brand, nav .nav-link {
+      color: #E0E0E0 !important; /* Light grey */
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    nav .nav-link:hover, nav .nav-link.contact-btn {
+      color: #FF5722 !important; /* Darker orange */
+    }
+    nav .navbar-toggler-icon {
+      filter: invert(1);
+    }
+
+    /* Glass Card */
+    .glass-card {
+      background: rgba(42, 42, 42, 0.5); /* Darker grey with transparency */
+      box-shadow: 0 4px 30px rgba(255, 127, 17, 0.1); /* Neon orange shadow */
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid #595959; /* Medium grey border */
+      color: #E0E0E0; /* Light grey */
+    }
+
+    /* Hero SECTION */
+    .hero-section {
+      position: relative;
+      min-height: 100vh;
+      padding: 2rem 0;
+      overflow: hidden;
+    }
+    .hero-bg-shapes .hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      background: #2A2A2A; /* Darker grey */
+      opacity: 0.5;
+      filter: blur(80px);
+      animation: floatblob 25s ease-in-out infinite;
+      z-index: 0;
+    }
+    .hero-blob.accent {
+      background: #FF7F11; /* Neon orange */
+      opacity: 0.2;
+      filter: blur(90px);
+    }
+    .hero-blob-1 {
+      width: 400px;
+      height: 400px;
+      top: -150px;
+      left: -100px;
+      animation-delay: 0s;
+    }
+    .hero-blob-2 {
+      width: 600px;
+      height: 600px;
+      top: 250px;
+      right: -200px;
+      animation-delay: 8s;
+    }
+    .hero-blob-3 {
+      width: 350px;
+      height: 350px;
+      bottom: -100px;
+      left: 25%;
+      animation-delay: 15s;
+    }
+    @keyframes floatblob {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(50px, 30px); }
+    }
+    .hero-name-gradient {
+      background: linear-gradient(45deg, #FF7F11, #FF5722); /* Neon orange to darker orange */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+    }
+    .hero-badge {
+      background: transparent !important;
+      border: 1px solid #595959 !important; /* Medium grey */
+      color: #E0E0E0 !important; /* Light grey */
+    }
+    .chip {
+      background: rgba(89, 89, 89, 0.3); /* Medium grey with transparency */
+      color: #E0E0E0; /* Light grey */
+      padding: 0.4rem 0.8rem;
+      border-radius: 15px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.9rem;
+      border: 1px solid #595959; /* Medium grey */
+    }
+    .chip:hover {
+      background: rgba(255, 87, 34, 0.2); /* Darker orange hover */
+      color: #FF5722; /* Darker orange */
+    }
+    .profile-img {
+      border-radius: 50%;
+      border: 3px solid #595959; /* Medium grey */
+      max-width: 240px;
+      box-shadow: 0 0 30px rgba(255, 127, 17, 0.3); /* Neon orange shadow */
+    }
+    .btn-primary, .btn-outline-light {
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 0.75rem 2rem;
+    }
+    .btn-primary {
+      background-color: #FF7F11; /* Neon orange */
+      color: #121212; /* Charcoal black */
+      border: none;
+      transition: background-color 0.3s, color 0.3s, transform 0.2s ease;
+      box-shadow: 0 0 15px rgba(255, 127, 17, 0.5);
+    }
+    .btn-primary:hover {
+      background-color: #FF5722; /* Darker orange */
+      color: #121212;
+      transform: translateY(-2px);
+    }
+    .btn-outline-light {
+      color: #E0E0E0; /* Light grey */
+      border: 2px solid #595959; /* Medium grey */
+    }
+    .btn-outline-light:hover {
+      background-color: #595959; /* Medium grey */
+      color: #FF5722; /* Darker orange */
+      border-color: #FF5722;
+    }
+
+    /* Section headers */
+    .section-header h2 {
+      color: #E0E0E0; /* Light grey */
+      font-weight: 800;
+      text-shadow: 0 0 10px rgba(255, 127, 17, 0.3); /* Neon orange glow */
+    }
+    .section-line {
+      width: 6rem;
+      height: 4px;
+      margin: 0.5rem auto 2rem;
+      background: linear-gradient(to right, #FF7F11, #FF5722); /* Neon orange to darker orange */
+      border-radius: 2px;
+    }
+
+    /* Summary Section */
+    .summary-card i {
+      color: #FF5722; /* Darker orange */
+    }
+    .summary-card p.lead {
+      color: #E0E0E0; /* Light grey */
+    }
+
+    /* Education Timeline */
+    .timeline-modern-item {
+      background: rgba(42, 42, 42, 0.5); /* Darker grey with transparency */
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 20px;
+      border: 1px solid #595959; /* Medium grey */
+      color: #E0E0E0; /* Light grey */
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 0 15px rgba(255, 127, 17, 0.2); /* Neon orange shadow */
+    }
+    .timeline-modern-item h4 {
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+      color: #E0E0E0; /* Light grey */
+    }
+    .timeline-modern-dot i {
+      font-size: 2rem;
+      color: #FF7F11; /* Neon orange */
+      flex-shrink: 0;
+    }
+    .timeline-modern-content span.badge {
+      font-weight: 600;
+      background: transparent !important;
+      border: 1px solid #595959 !important; /* Medium grey */
+      color: #E0E0E0 !important; /* Light grey */
+    }
+
+    /* Skill Cards */
+    .skill-card {
+      background: rgba(42, 42, 42, 0.5); /* Darker grey with transparency */
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 0 15px rgba(255, 127, 17, 0.2); /* Neon orange shadow */
+      color: #E0E0E0; /* Light grey */
+      transition: background-color 0.3s, transform 0.2s ease;
+      border: 1px solid #595959; /* Medium grey */
+    }
+    .skill-card:hover {
+      background: rgba(255, 127, 17, 0.1); /* Neon orange with transparency */
+      transform: translateY(-5px);
+      color: #E0E0E0;
+    }
+    .skill-badges .badge {
+      opacity: 0.85;
+      font-weight: 600;
+      margin-right: 0.25rem;
+      margin-bottom: 0.4rem;
+      font-size: 0.87rem;
+      border: 1px solid #595959; /* Medium grey */
+      background: transparent !important;
+      color: #E0E0E0 !important; /* Light grey */
+    }
+    .skill-badges .badge:hover {
+      border-color: #FF5722; /* Darker orange */
+      color: #FF5722 !important; /* Darker orange */
+    }
+    .skill-card i {
+      color: #FF7F11; /* Neon orange */
+    }
+    .skill-card h5 {
+      color: #E0E0E0; /* Light grey */
+    }
+
+    /* Projects Section */
+    .project-card-neo {
+      background: rgba(42, 42, 42, 0.5); /* Darker grey with transparency */
+      border-radius: 20px;
+      padding: 1.5rem;
+      color: #E0E0E0; /* Light grey */
+      box-shadow: 0 0 20px rgba(255, 127, 17, 0.2); /* Neon orange shadow */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border: 1px solid #595959; /* Medium grey */
+    }
+    .project-card-neo:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 40px rgba(255, 127, 17, 0.4); /* Brighter neon orange shadow */
+    }
+    .project-icon {
+      font-size: 2.5rem;
+      color: #FF5722; /* Darker orange */
+      margin-bottom: 1rem;
+    }
+    .project-title {
+      font-weight: 800;
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #E0E0E0; /* Light grey */
+    }
+    .project-badges .badge {
+      margin-right: 0.3rem;
+      margin-bottom: 0.3rem;
+      opacity: 0.8;
+      font-weight: 600;
+      font-size: 0.85rem;
+      background: transparent !important;
+      border: 1px solid #595959 !important; /* Medium grey */
+      color: #E0E0E0 !important; /* Light grey */
+    }
+    .project-badges .badge:hover {
+      border-color: #FF7F11; /* Neon orange */
+      color: #FF7F11 !important; /* Neon orange */
+    }
+    .project-desc {
+      flex-grow: 1;
+      font-size: 1rem;
+      color: #E0E0E0; /* Light grey */
+    }
+
+    /* CI/CD Section with blobs */
+    .section-blobs {
+      position: relative;
+      overflow: hidden;
+      color: #E0E0E0; /* Light grey */
+    }
+    .section-blobs .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.5;
+      animation: blobfloat 25s ease-in-out infinite;
+      z-index: 0;
+    }
+    .blob1 {
+      width: 300px;
+      height: 300px;
+      background: #2A2A2A; /* Darker grey */
+      top: -100px;
+      left: 10%;
+      animation-delay: 0s;
+    }
+    .blob2 {
+      width: 350px;
+      height: 350px;
+      background: #FF7F11; /* Neon orange */
+      opacity: 0.2;
+      top: 200px;
+      right: 5%;
+      animation-delay: 8s;
+    }
+    .blob3 {
+      width: 250px;
+      height: 250px;
+      background: #2A2A2A; /* Darker grey */
+      bottom: 20px;
+      left: 25%;
+      animation-delay: 15s;
+    }
+    @keyframes blobfloat {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(50px, 30px); }
+    }
+    .cicd-img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(255, 127, 17, 0.3); /* Neon orange shadow */
+      position: relative;
+      z-index: 1;
+    }
+    .section-header h2.text-white {
+      color: #E0E0E0; /* Light grey */
+      text-shadow: 0 0 10px rgba(255, 127, 17, 0.3); /* Neon orange glow */
+    }
+
+    /* Blog Section styled like projects, no images */
+    .blog-card {
+      background: rgba(42, 42, 42, 0.5); /* Darker grey with transparency */
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 30px rgba(255, 127, 17, 0.2); /* Neon orange shadow */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 1.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      color: #E0E0E0; /* Light grey */
+      font-weight: 600;
+      font-size: 1.1rem;
+      gap: 0.75rem;
+      position: relative;
+      z-index: 1;
+      border: 1px solid #595959; /* Medium grey */
+    }
+    .blog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(255, 127, 17, 0.4); /* Brighter neon orange shadow */
+    }
+    .blog-title {
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-bottom: 0.3rem;
+      color: #E0E0E0; /* Light grey */
+    }
+    .blog-excerpt {
+      color: #E0E0E0; /* Light grey */
+      font-weight: 400;
+      font-size: 1rem;
+      min-height: 72px;
+    }
+    .blog-readmore {
+      font-weight: 600;
+      text-decoration: none;
+      color: #FF7F11; /* Neon orange */
+      transition: color 0.2s ease;
+      font-size: 0.95rem;
+    }
+    .blog-readmore:hover {
+      color: #FF5722; /* Darker orange */
+      text-decoration: underline;
+    }
+
+    /* Extra Curricular Section */
+    .list-group-item {
+      background: rgba(42, 42, 42, 0.5); /* Darker grey with transparency */
+      border: 1px solid #595959; /* Medium grey */
+      color: #E0E0E0; /* Light grey */
+      font-weight: 600;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    /* Contact Section */
+    .contact-info-card, .contact-form-card {
+      background: rgba(42, 42, 42, 0.5); /* Darker grey with transparency */
+      border-radius: 20px;
+      padding: 1.5rem;
+      color: #E0E0E0; /* Light grey */
+      box-shadow: 0 0 20px rgba(255, 127, 17, 0.2); /* Neon orange shadow */
+      margin-bottom: 1.75rem;
+      border: 1px solid #595959; /* Medium grey */
+    }
+    .contact-info-header i {
+      color: #FF7F11; /* Neon orange */
+    }
+    .contact-info-header h3 {
+      color: #E0E0E0; /* Light grey */
+      font-weight: 700;
+    }
+    .contact-item .contact-icon i {
+      color: #FF5722; /* Darker orange */
+      font-size: 1.5rem;
+    }
+    .contact-item .contact-text h6 {
+      color: #E0E0E0; /* Light grey */
+      font-weight: 600;
+    }
+    .contact-item .contact-text p, 
+    .contact-item .contact-text a {
+      color: #E0E0E0; /* Light grey */
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .contact-item .contact-text a:hover {
+      color: #FF5722; /* Darker orange */
+      text-decoration: underline;
+    }
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .social-link i {
+      color: #FF7F11; /* Neon orange */
+      font-size: 1.8rem;
+      transition: color 0.3s ease;
+    }
+    .social-link:hover i {
+      color: #FF5722; /* Darker orange */
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1A1A1A !important; /* Slightly lighter charcoal */
+      color: #E0E0E0; /* Light grey */
+    }
+    footer .social-links a i {
+      color: #FF7F11; /* Neon orange */
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+      transition: color 0.3s ease;
+    }
+    footer .social-links a:hover i {
+      color: #FF5722; /* Darker orange */
+    }
+    footer p {
+      color: #595959; /* Medium grey */
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+
+    /* Buttons */
+    button.btn-primary {
+      border-radius: 40px;
+      font-weight: 700;
+      background-color: #FF7F11; /* Neon orange */
+      color: #121212; /* Charcoal black */
+      border: none;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 0 15px rgba(255, 127, 17, 0.5);
+    }
+    button.btn-primary:hover {
+      background-color: #FF5722; /* Darker orange */
+      color: #121212;
+      transform: translateY(-2px);
+    }
+
+    /* Input fields */
+    .form-control, .input-group-text {
+      background: rgba(89, 89, 89, 0.3); /* Medium grey with transparency */
+      border: 1px solid #595959; /* Medium grey */
+      color: #E0E0E0; /* Light grey */
+      border-radius: 10px;
+    }
+    .form-control::placeholder {
+      color: #E0E0E0; /* Light grey */
+    }
+    .input-icon {
+      color: #FF5722; /* Darker orange */
+      padding-left: 12px;
+      padding-right: 12px;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Scroll arrow */
+    .hero-scroll a i {
+      color: #FF7F11; /* Neon orange */
+      font-size: 2rem;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <span class="brand-text">Omkar Hiwale</span>
+        <span class="brand-dot"></span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">
+              <i class="fas fa-user"></i>
+              <span>About</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">
+              <i class="fas fa-code"></i>
+              <span>Skills</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">
+              <i class="fas fa-project-diagram"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link contact-btn" href="#contact">
+              <i class="fas fa-envelope"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero/Header Section -->
+  <section
+    id="home"
+    class="hero-section colorful-section section-hero position-relative"
+  >
+    <div class="hero-bg-shapes">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2 accent"></div>
+      <div class="hero-blob hero-blob-3"></div>
+    </div>
+    <div class="container">
+      <div class="row align-items-center justify-content-center min-vh-100">
+        <div class="col-lg-10">
+          <div
+            class="hero-card glass-card d-flex flex-column flex-lg-row align-items-center justify-content-center gap-5 p-5"
+          >
+            <!-- Profile Image -->
+            <div class="hero-profile-img mb-4 mb-lg-0">
+              <img
+                src="okm.jpg"
+                alt="Omkar Hiwale Profile"
+                class="profile-img"
+              />
+            </div>
+            <!-- Hero Content -->
+            <div class="flex-grow-1 text-center text-lg-start">
+              <h1 class="display-1 fw-bold mb-3 hero-name-gradient">
+                Omkar Hiwale
+              </h1>
+              <span class="badge hero-badge mb-4"
+                >Fresher <span class="fst-italic">(student)</span></span
+              >
+              <div
+                class="hero-contact-chips d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mb-4"
+              >
+                <span class="chip"
+                  ><i class="fas fa-phone"></i> +91 9422712091</span
+                >
+                <span class="chip"
+                  ><i class="fas fa-envelope"></i> hiwaleomkar2001@gmail.com</span
+                >
+                <a
+                  class="chip"
+                  href="https://linkedin.com/in/Omkar_Hiwale"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i> Omkar_Hiwale</a
+                >
+                <span class="chip"
+                  ><i class="fas fa-calendar"></i> 09.02.2001</span
+                >
+                <span class="chip"
+                  ><i class="fas fa-map-marker-alt"></i>
+                  Chhatrapati Sambhajinagar, India</span
+                >
+              </div>
+              <div
+                class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mb-2"
+              >
+                <a
+                  href="#contact"
+                  class="btn btn-primary btn-lg hero-cta"
+                  ><i class="fas fa-paper-plane me-2"></i>Get in Touch</a
+                >
+                <a
+                  href="#projects"
+                  class="btn btn-outline-light btn-lg hero-cta"
+                  ><i class="fas fa-folder-open me-2"></i>View Projects</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <a href="#about">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
+    <div class="shape-divider-bottom"></div>
+  </section>
+
+  <!-- Summary Section renamed to About -->
+  <section
+    id="about"
+    class="py-5 colorful-section section-summary"
+  >
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="display-4 fw-bold">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="summary-card glass-card p-4 mx-auto text-center">
+            <i class="fas fa-user-graduate fa-3x mb-3 text-gradient"></i>
+            <p class="lead mb-0">
+              A fresher with a solid foundation in computer applications and
+              project development, now focused on DevOps engineering.
+              Experienced with web technologies, backend programming, and
+              database systems. Skilled in automating deployments, managing
+              servers, and working with CI/CD tools. Certified in areas that
+              support both technical and operational tasks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shape-divider-bottom"></div>
+  </section>
+
+  <!-- Education Section -->
+  <section
+    id="education"
+    class="py-5 colorful-section section-education"
+  >
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="display-4 fw-bold">Education</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="education-timeline-modern">
+            <div class="timeline-modern-item">
+              <div class="timeline-modern-dot"><i class="fas fa-university"></i></div>
+              <div class="timeline-modern-content">
+                <h4>Maharashtra Institute of Technology (MIT)</h4>
+                <span class="badge bg-gradient-primary mb-2"
+                  >2023 – 2025 (Appearing)</span
+                >
+                <p class="mb-1">Master of Computer Applications (M.C.A)</p>
+              </div>
+            </div>
+            <div class="timeline-modern-item">
+              <div class="timeline-modern-dot"><i class="fas fa-graduation-cap"></i></div>
+              <div class="timeline-modern-content">
+                <h4>S. B. E. S. College</h4>
+                <span class="badge bg-gradient-secondary mb-2">2019 – 2022 (78%)</span>
+                <p class="mb-1">Bachelor of Computer Applications (B.C.A)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shape-divider-bottom"></div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-5 colorful-section section-skills">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="display-4 fw-bold">Skills</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="skill-card glass-card text-center p-4">
+                <i class="fas fa-code fa-2x mb-3 text-gradient"></i>
+                <h5 class="fw-bold mb-2">Web Technology</h5>
+                <div class="skill-badges mb-2">
+                  <span class="badge bg-gradient-primary">HTML</span>
+                  <span class="badge bg-gradient-secondary">CSS</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="skill-card glass-card text-center p-4">
+                <i class="fas fa-server fa-2x mb-3 text-gradient"></i>
+                <h5 class="fw-bold mb-2">cloud Technology</h5>
+                <div class="skill-badges mb-2">
+                  <span class="badge bg-gradient-primary">AWS</span>
+                  <span class="badge bg-gradient-secondary">Azure</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="skill-card glass-card text-center p-4">
+                <i class="fas fa-database fa-2x mb-3 text-gradient"></i>
+                <h5 class="fw-bold mb-2">CI/CD Technology</h5>
+                <div class="skill-badges mb-2">
+                  <span class="badge bg-gradient-primary">Jenkins</span>
+                  <span class="badge bg-gradient-primary">Jenkins</span>
+                  <span class="badge bg-gradient-secondary">Git & Github</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="skill-card glass-card text-center p-4">
+                <i class="fas fa-linux fa-2x mb-3 text-gradient"></i>
+                <h5 class="fw-bold mb-2">Operating System</h5>
+                <div class="skill-badges mb-2">
+                  <span class="badge bg-gradient-primary">Linux (Redhat)</span>
+                  <span class="badge bg-gradient-secondary">Ubuntu</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="skill-card glass-card text-center p-4">
+                <i class="fas fa-tools fa-2x mb-3 text-gradient"></i>
+                <h5 class="fw-bold mb-2">Tools/IDLE</h5>
+                <div class="skill-badges mb-2">
+                  <span class="badge bg-gradient-primary">Eclipse</span>
+                  <span class="badge bg-gradient-secondary">VS Code</span>
+                  <span class="badge bg-gradient-success">Android Studio</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="skill-card glass-card text-center p-4">
+                <i class="fas fa-tools fa-2x mb-3 text-gradient"></i>
+                <h5 class="fw-bold mb-2">autometion Tools</h5>
+                <div class="skill-badges mb-2">
+                  <span class="badge bg-gradient-primary">Terraform</span>
+                  <span class="badge bg-gradient-secondary">Ansible</span>
+                  <span class="badge bg-gradient-success">Docker</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-5 colorful-section section-projects">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="display-4 fw-bold">Projects</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="row g-5 justify-content-center">
+        <!-- Project 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card-neo h-100">
+            <div class="project-icon mb-3">
+              <i class="fas fa-user-check"></i>
+            </div>
+            <h3 class="project-title">Online Attendance System</h3>
+            <div class="project-badges mb-2">
+              <span class="badge bg-gradient-primary">PHP</span>
+              <span class="badge bg-gradient-secondary">HTML</span>
+              <span class="badge bg-gradient-success">CSS</span>
+              <span class="badge bg-gradient-warning">JavaScript</span>
+              <span class="badge bg-gradient-info">XAMPP</span>
+            </div>
+            <p class="project-desc">
+              A web-based application for managing attendance efficiently with features like user authentication and reporting.
+            </p>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card-neo h-100">
+            <div class="project-icon mb-3">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3 class="project-title">E-Shopping System</h3>
+            <div class="project-badges mb-2">
+              <span class="badge bg-gradient-primary">ASP.NET</span>
+              <span class="badge bg-gradient-secondary">HTML</span>
+              <span class="badge bg-gradient-success">CSS</span>
+              <span class="badge bg-gradient-warning">JavaScript</span>
+              <span class="badge bg-gradient-info">SQL Server</span>
+            </div>
+            <p class="project-desc">
+              A web-based application for online buying and selling of products with features like product catalogs, secure payments, and order management.
+            </p>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card-neo h-100">
+            <div class="project-icon mb-3">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3 class="project-title">Guess_Logo (Android Game)</h3>
+            <div class="project-badges mb-2">
+              <span class="badge bg-gradient-primary">Android</span>
+              <span class="badge bg-gradient-secondary">XML</span>
+              <span class="badge bg-gradient-success">Java</span>
+            </div>
+            <p class="project-desc">
+              An interactive mobile game where users identify brand logos through various levels with hints and rewards.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CI/CD Section with blobs -->
+  <section id="cicd" class="py-5 colorful-section section-skills section-blobs">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="display-4 fw-bold text-white">CI/CD Technology Insight</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="row justify-content-center align-items-center gap-5">
+        <div class="col-lg-12 text-white text-center fs-5">
+          <p>
+            Continuous Integration and Continuous Deployment (CI/CD) are pivotal practices in modern DevOps enabling fast, reliable, and automated software delivery. These pipelines help teams build, test, and deploy applications seamlessly using tools such as Jenkins, Git, and Docker.
+          </p>
+          <p>
+            Through automation, CI/CD reduces human error, enhances productivity, and accelerates release cycles, ensuring high-quality software is delivered consistently to end-users.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section styled like projects, no images -->
+  <section id="blog" class="py-5 colorful-section section-blog section-blobs">
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="display-4 fw-bold">Blog</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="blog-card">
+            <h3 class="blog-title">
+              Getting Started with Jenkins: Automate Your Builds
+            </h3>
+            <p class="blog-excerpt">
+              Learn the basics of setting up a Jenkins CI pipeline to automate your project's build, test, and deployment processes.
+            </p>
+            <a href="#" class="blog-readmore">Read More →</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="blog-card">
+            <h3 class="blog-title">Introduction to Docker for Beginners</h3>
+            <p class="blog-excerpt">
+              Discover how Docker containerization can simplify deployment and make your applications portable across environments.
+            </p>
+            <a href="#" class="blog-readmore">Read More →</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="blog-card">
+            <h3 class="blog-title">Terraform Basics: Infrastructure as Code</h3>
+            <p class="blog-excerpt">
+              Explore Terraform to provision and manage cloud infrastructure efficiently and systematically.
+            </p>
+            <a href="#" class="blog-readmore">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extra Curricular Activities Section -->
+  <section
+    id="activities"
+    class="py-5 colorful-section section-activities"
+  >
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="display-4 fw-bold">Extra Curricular Activities</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <ul class="list-group list-group-flush text-center">
+            <li class="list-group-item">Volunteering in tree plantation</li>
+            <li class="list-group-item">Executing and organizing donation camp</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="shape-divider-bottom"></div>
+  </section>
+
+  <!-- Contact Section -->
+  <section
+    id="contact"
+    class="py-5 colorful-section section-contact"
+  >
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="display-4 fw-bold">Let's Connect</h2>
+        <div class="section-line"></div>
+        <p class="lead mt-4">
+          Have a project in mind? Let's discuss how we can work together!
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="contact-info-card glass-card p-4">
+            <div class="contact-info-header mb-4">
+              <i class="fas fa-paper-plane fa-2x text-gradient"></i>
+              <h3 class="fw-bold mt-2">Get in Touch</h3>
+            </div>
+            <div class="contact-info-content mb-4">
+              <div class="contact-item d-flex align-items-center mb-3">
+                <div class="contact-icon me-3">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-text">
+                  <h6 class="mb-1">Phone</h6>
+                  <p class="mb-0">+91 9422712091</p>
+                </div>
+              </div>
+              <div class="contact-item d-flex align-items-center mb-3">
+                <div class="contact-icon me-3">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                  <h6 class="mb-1">Email</h6>
+                  <p class="mb-0">hiwaleomkar2001@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-item d-flex align-items-center mb-3">
+                <div class="contact-icon me-3">
+                  <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="contact-text">
+                  <h6 class="mb-1">LinkedIn</h6>
+                  <a href="https://linkedin.com/in/Omkar_Hiwale" target="_blank"
+                    >Omkar_Hiwale</a
+                  >
+                </div>
+              </div>
+              <div class="contact-item d-flex align-items-center mb-3">
+                <div class="contact-icon me-3">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-text">
+                  <h6 class="mb-1">Location</h6>
+                  <p class="mb-0">Chh. Sambhajinagar, India</p>
+                </div>
+              </div>
+            </div>
+            <div class="social-links">
+              <a
+                href="https://linkedin.com/in/Omkar_Hiwale"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="mailto:hiwaleomkar2001@gmail.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="tel:+919422712091" class="social-link">
+                <i class="fas fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="contact-form-card glass-card p-4">
+            <form id="contact-form" class="contact-form">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <div class="input-group">
+                      <span class="input-icon"><i class="fas fa-user"></i></span>
+                      <input
+                        type="text"
+                        id="name"
+                        class="form-control"
+                        placeholder="Your Name"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <div class="input-group">
+                      <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                      <input
+                        type="email"
+                        id="email"
+                        class="form-control"
+                        placeholder="Your Email"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <div class="input-group">
+                      <span class="input-icon"
+                        ><i class="fas fa-tag"></i
+                      ></span>
+                      <input
+                        type="text"
+                        id="subject"
+                        class="form-control"
+                        placeholder="Project Inquiry"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <div class="input-group">
+                      <span class="input-icon"><i class="fas fa-comment"></i></span>
+                      <textarea
+                        id="message"
+                        class="form-control"
+                        rows="5"
+                        placeholder="Tell me about your project..."
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-lg w-100"
+                  >
+                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shape-divider-bottom"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <div class="social-links mb-4">
+            <a href="https://linkedin.com/in/Omkar_Hiwale" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://github.com/omkarhiwale" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://twitter.com/your-handle" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+          <p class="mb-0">© 2025 Omkar Hiwale. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
