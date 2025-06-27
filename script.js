@@ -42,31 +42,40 @@ document.querySelectorAll('section').forEach(section => {
 
 // Form submission handling
 const contactForm = document.getElementById('contact-form');
+
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
-        
-        // Here you would typically send the data to a server
-        console.log('Form submitted:', data);
-        
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    // Send data to Google Forms
+    fetch(this.action, {
+      method: 'POST',
+      mode: 'no-cors', // Important for Google Forms
+      body: formData
+    })
+      .then(() => {
         // Show success message
         const successMessage = document.createElement('div');
         successMessage.className = 'alert alert-success mt-3';
-        successMessage.textContent = 'Thank you for your message! I will get back to you soon.';
-        this.appendChild(successMessage);
-        
+        successMessage.textContent =
+          'Thank you for your message! I will get back to you soon.';
+        contactForm.appendChild(successMessage);
+
         // Reset form
-        this.reset();
-        
-        // Remove success message after 5 seconds
+        contactForm.reset();
+
+        // Remove message after 5 seconds
         setTimeout(() => {
-            successMessage.remove();
+          successMessage.remove();
         }, 5000);
-    });
+      })
+      .catch((error) => {
+        console.error('Form submission error:', error);
+        alert('Oops! Something went wrong. Please try again later.');
+      });
+  });
 }
 
 // Add active class to navigation links based on scroll position
