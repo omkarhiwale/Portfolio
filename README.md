@@ -42,8 +42,8 @@ DevOps | Cloud | Kubernetes | Terraform
 
 ### 📫 Connect with me:
 
-- LinkedIn: `https://www.linkedin.com/in/omkarhiwale/`
+- LinkedIn: *https://www.linkedin.com/in/omkarhiwale/*
 
-- GitHub: `https://github.com/omkarhiwale/`
+- GitHub: *https://github.com/omkarhiwale/*
 
 ### ⭐ If you like this portfolio, don’t forget to star the repo!
