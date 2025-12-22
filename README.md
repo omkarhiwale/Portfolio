@@ -23,5 +23,27 @@ This portfolio is a central place to highlight my learning journey and real-worl
 ## 🚀 Live Demo
 
 🔗 **Portfolio Website:**  
-👉 *Add your deployed URL here*  
-Example:
+👉 *https://omkarhiwale.fun*  
+
+
+
+
+## 📈 Future Improvements
+
+- Add blog section
+- Integrate contact form backend
+- Improve animations and UI
+- Add more real-world projects
+
+ ## 🙌 Author
+
+**Omkar Hiwale**    
+DevOps | Cloud | Kubernetes | Terraform
+
+### 📫 Connect with me:
+
+- LinkedIn: `https://www.linkedin.com/in/omkarhiwale/`
+
+- GitHub: `https://github.com/omkarhiwale/`
+
+### ⭐ If you like this portfolio, don’t forget to star the repo!
