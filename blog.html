@@ -256,7 +256,7 @@
             <p>
               Learn the basics of setting up a Jenkins CI pipeline to automate your project's build, test, and deployment processes.
             </p>
-            <a href="#" class="blog-readmore-btn" data-post-id="jenkins-post">Read More →</a>
+            <a href="blog-posts/jenkins-post.html" class="blog-readmore-btn">Read More →</a>
           </div>
         </div>
 
@@ -267,7 +267,7 @@
             <p>
               Discover how Docker containerization can simplify deployment and make your applications portable across environments.
             </p>
-            <a href="#" class="blog-readmore-btn" data-post-id="docker-post">Read More →</a>
+            <a href="blog-posts/docker-post.html" class="blog-readmore-btn">Read More →</a>
           </div>
         </div>
 
@@ -278,19 +278,19 @@
             <p>
               Explore Terraform to provision and manage cloud infrastructure efficiently and systematically.
             </p>
-            <a href="#" class="blog-readmore-btn" data-post-id="terraform-post">Read More →</a>
+            <a href="blog-posts/terraform-post.html" class="blog-readmore-btn">Read More →</a>
           </div>
         </div>
-      </div>
-      <!-- Full blog post content will be loaded here when a "Read More" button is clicked -->
-      <div class="row justify-content-center d-none" id="full-blog-post-view">
-        <div class="col-lg-10" id="blog-post-detail-content">
-          <!-- Content will be injected here by JavaScript -->
-        </div>
-        <div class="col-lg-10 text-center mt-4 d-none" id="back-to-list-button-container">
-            <button class="btn btn-back-to-blog-list" id="back-to-blog-list-btn">
-                <i class="fas fa-arrow-left me-2"></i> Back to Blog List
-            </button>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card blog-post-preview-card">
+            <h3>Essential Linux Commands for DevOps</h3>
+            <p class="post-meta">Published on: January 15, 2024 | Category: Linux, DevOps</p>
+            <p>
+              A comprehensive guide to fundamental Linux commands crucial for any DevOps engineer to manage systems and automate tasks.
+            </p>
+            <a href="blog-posts/linux-info-post.html" class="blog-readmore-btn">Read More →</a>
+          </div>
         </div>
       </div>
     </div>
@@ -312,7 +312,7 @@
               ><i class="fab fa-twitter"></i
             ></a>
           </div>
-          <p class="mb-0">© 2025 Omkar Hiwale. All rights reserved.</p>
+          <p class="mb-0">© 2026 Omkar Hiwale. All rights reserved.</p>
         </div>
       </div>
     </div>
@@ -320,69 +320,5 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS for Blog -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const blogPostsContainer = document.getElementById('blog-posts-container');
-      const fullBlogPostView = document.getElementById('full-blog-post-view');
-      const blogPostDetailContent = document.getElementById('blog-post-detail-content');
-      const backToListButtonContainer = document.getElementById('back-to-list-button-container');
-      const backToBlogListBtn = document.getElementById('back-to-blog-list-btn');
-      const blogHeader = document.getElementById('blog-header');
-
-      // Function to load a specific blog post
-      function loadBlogPost(postId) {
-        fetch(`blog-posts/${postId}-post.html`)
-          .then(response => {
-            if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.text();
-          })
-          .then(html => {
-            blogPostDetailContent.innerHTML = html;
-            blogPostsContainer.classList.add('d-none'); // Hide previews
-            fullBlogPostView.classList.remove('d-none'); // Show full post view
-            backToListButtonContainer.classList.remove('d-none'); // Show back button
-            blogHeader.classList.add('d-none'); // Hide main blog header
-            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
-          })
-          .catch(error => {
-            console.error('Error loading blog post:', error);
-            blogPostDetailContent.innerHTML = `<p class="text-danger">Error loading post. Please try again later.</p>`;
-            blogPostsContainer.classList.add('d-none');
-            fullBlogPostView.classList.remove('d-none');
-            backToListButtonContainer.classList.remove('d-none');
-            blogHeader.classList.add('d-none');
-          });
-      }
-
-      // Function to show the blog post list
-      function showBlogList() {
-        blogPostsContainer.classList.remove('d-none'); // Show previews
-        fullBlogPostView.classList.add('d-none'); // Hide full post view
-        backToListButtonContainer.classList.add('d-none'); // Hide back button
-        blogHeader.classList.remove('d-none'); // Show main blog header
-        blogPostDetailContent.innerHTML = ''; // Clear content
-        window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
-      }
-
-      // Event listeners for "Read More" buttons
-      document.querySelectorAll('.blog-readmore-btn').forEach(button => {
-        button.addEventListener('click', function(event) {
-          event.preventDefault(); // Prevent default link behavior
-          const postId = this.dataset.postId; // Get the post ID from data-post-id attribute
-          loadBlogPost(postId);
-        });
-      });
-
-      // Event listener for "Back to Blog List" button
-      backToBlogListBtn.addEventListener('click', showBlogList);
-
-      // Handle direct links to posts (optional, for future deep linking)
-      // You could parse URL parameters here to load a specific post on page load
-      // For now, it defaults to showing the list.
-    });
-  </script>
 </body>
 </html>
