@@ -1,0 +1,124 @@
+[33mcommit 768be2549eb359eed2ccd4c92c8918d2d245b2b4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: omkarhiwale <hiwaleomkar2001@gmail.com>
+Date:   Wed Apr 15 14:38:14 2026 +0530
+
+    Comment out the education section layout for future adjustments
+
+[33mcommit 18a1a06c67530dc1577db946912ca4b09d3b2069[m
+Author: omkarhiwale <hiwaleomkar2001@gmail.com>
+Date:   Wed Apr 15 12:53:38 2026 +0530
+
+    Update blog links and contact information; enhance smooth scrolling functionality
+
+[33mcommit 299388fa47d5d697680acf6127272e24883ba6a7[m
+Merge: 1d9b7ac c068a34
+Author: omkarhiwale <hiwaleomkar2001@gmail.com>
+Date:   Tue Apr 14 14:07:50 2026 +0530
+
+    Merge branch 'main' of https://github.com/omkarhiwale/Portfolio
+
+[33mcommit 1d9b7ac7e3a2fd0d4f690539f4f87e44ec762ae7[m
+Author: omkarhiwale <hiwaleomkar2001@gmail.com>
+Date:   Tue Apr 14 14:07:47 2026 +0530
+
+    dont know
+
+[33mcommit c068a348b63a703a1e0bac6b077f5f2ae94bd1af[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Sat Jan 24 22:43:12 2026 +0530
+
+    Update print statement to farewell message
+
+[33mcommit 801c2ef9c4fa654d4877704833921b69030476a8[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Sat Jan 24 22:40:23 2026 +0530
+
+    time pass
+
+[33mcommit db1a37101514cf074536dce6b4874dec41e076a2[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Mon Jan 19 23:22:15 2026 +0530
+
+    Update print statement from 'Hello' to 'Goodbye'
+
+[33mcommit 16d048abeb91e913f56d5113d72c181891db5ede[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Mon Jan 19 23:19:49 2026 +0530
+
+    testing par........
+
+[33mcommit cccb0e91a8fd06dea2020f1c300e6f881266f209[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Tue Dec 23 01:09:18 2025 +0530
+
+    Update LinkedIn and GitHub links formatting
+
+[33mcommit d604b05b35b8383c31266d298247c537f69ae973[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Tue Dec 23 01:07:32 2025 +0530
+
+    Enhance README with live demo and author details
+    
+    Updated live demo section with example URL and added author information.
+
+[33mcommit 6408074c03e6ff289e8b631304f92d9f9bb11125[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Tue Dec 23 01:01:53 2025 +0530
+
+    Add README for personal portfolio website
+    
+    Initial commit of the README file for personal portfolio website.
+
+[33mcommit 88875b834d751db8d79a80290964ae066e1b468d[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Sun Dec 14 20:00:30 2025 +0530
+
+    Update name software to Devops
+
+[33mcommit cfe94dc62da2b7dbcbfac3cf6750230ec13e0aa7[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Tue Nov 11 14:38:02 2025 +0530
+
+    update skills and trying add link to readmore buttuns
+
+[33mcommit 8b585a4c14c26b3a6be489b97761e9a9200b2720[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Fri Jun 27 12:12:16 2025 +0530
+
+    Update script.js
+
+[33mcommit dfb3ba9f7ca37dce57ee399e9e0f8663d087eeaf[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Fri Jun 27 12:04:10 2025 +0530
+
+    Update index.html
+
+[33mcommit f7156ca9f2a707ac6909970a65f4f8c337c4ca54[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Fri Jun 27 11:37:06 2025 +0530
+
+    Update index.html
+
+[33mcommit f2bec969089d2539877e5eec362e56339e306a80[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Sat Jun 14 12:13:16 2025 +0530
+
+    Update and rename index(v2).html to index.html
+
+[33mcommit 58913a35634acf18d5f8a090a6f8ea00c33a0083[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Sat Jun 14 12:12:04 2025 +0530
+
+    Create npm-publish-github-packages.yml
+
+[33mcommit 6fa4b5b8a2e99341b1bc0caaaecd655fce34c267[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Sat Jun 14 12:11:12 2025 +0530
+
+    Create jekyll-gh-pages.yml
+
+[33mcommit f49c20ef49a9409d5407a3a878d30364f44f1a31[m
+Author: omkar hiwale <111223839+omkarhiwale@users.noreply.github.com>
+Date:   Fri Jun 13 16:26:27 2025 +0530
+
+    Add files via upload
